@@ -6,12 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Certificates Page</title> 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js "></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-	
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <style>
 label{
 font-family: 'Lato', sans-serif;
@@ -177,7 +176,7 @@ if(regex.test(flds[0].value) == false)
 var proof= /[https:\/\/drive.google.com\/][a-zA-Z0-9@:%._\/+~#=]*/;
 var cername=/[a-zA-Z]*/
 var cerc=1;
-//console.log(flds);
+console.log(flds.value);
 //https://drive.google.com/file/d/1f-_JvG8oxnTjcrr-GSkOIRi4OcQoI2Bf/view?usp=sharing
 for (var i = 18; i < flds.length-1; i=i+2) 
 {
