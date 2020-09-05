@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects section</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script src="../scripts/projectsValidate.js"></script>
+  </head>
+  <body>  
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Projects
+          </h1>
+          <h2 class="subtitle">
+            Your work.
+          </h2>
+        </div>
+      </div>
+    </section>
+    <br>
+    <div class="container">
+      <form action="" name="projectsForm" onsubmit="onSubmit()">
+        <div id="theinputs">
+           <div class="field is-grouped">
+
+          <label class="label">1. Project Title :&nbsp;&nbsp;</label>
+
+        <p class="control">
+          <input class="input is-medium is-danger" id="p1" type="text" placeholder="Enter project title" size="30px">
+        </p>
+
+            <label class="label">Link :&nbsp;&nbsp;</label>
+
+        <p class="control ">
+          <input class="input is-medium is-success" id="l1" type="text" placeholder="Link to repository"  size="30px">
+        </p>
+    </div>
+    <br>
+
+    <div class="field is-grouped">
+
+          <label class="label">2. Project Title :&nbsp;&nbsp;</label>
+
+        <p class="control ">
+          <input class="input is-medium is-danger" id="p2" type="text" placeholder="Enter project title" size="30px">
+        </p>
+
+            <label class="label">Link :&nbsp;&nbsp;</label>
+
+        <p class="control ">
+          <input class="input is-medium is-success" id="l2" type="text" placeholder="Link to repository" size="30px">
+        </p>
+    </div>
+    <!-- <br>
+    <div class="field is-grouped">
+
+          <label class="label">3. Project Title :&nbsp;&nbsp;</label>
+
+        <p class="control">
+          <input class="input is-medium is-danger" id="p3" type="text" placeholder="Enter project title" size="30px">
+        </p>
+
+            <label class="label">Link :&nbsp;&nbsp;</label>
+
+        <p class="control ">
+          <input class="input is-medium is-success" id="l3" type="text" placeholder="Link to repository" size="30px">
+        </p>
+    </div> -->
+
+    <!-- <br>
+    <div class="field is-grouped">
+
+          <label class="label">4. Project Title :&nbsp;&nbsp;</label>
+
+        <p class="control">
+          <input class="input is-medium is-danger" id="p4" type="text" placeholder="Enter project title" size="30px">
+        </p>
+
+            <label class="label">Link :&nbsp;&nbsp;</label>
+
+        <p class="control ">
+          <input class="input is-medium is-success" id="l4" type="text" placeholder="Link to repository" size="30px">
+        </p>
+    </div> -->
+
+    <!-- <br>
+    <div class="field is-grouped">
+          <label class="label">5. Project Title :&nbsp;&nbsp;</label>
+
+        <p class="control">
+          <input class="input is-medium is-danger" id="p5" type="text" placeholder="Enter project title" size="30px">
+        </p>
+
+            <label class="label">Link :&nbsp;&nbsp;</label>
+
+        <p class="control ">
+          <input class="input is-medium is-success" id="l5" type="text" placeholder="Link to repository" size="30px">
+        </p>
+    </div> -->
+  </div>
+
+<br>
+<br>
+    <button class="button is-link  is-outlined is-fullwidth" type="submit">submit</button>
+    <br><br>
+  </form>
+  
+<button class="button is-dark" id="addProj" name="addProjectButton" onclick="addProject()"> Add another project</button>
+  </div>
+  </body>
+</html>
