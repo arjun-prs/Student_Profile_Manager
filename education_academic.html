@@ -142,16 +142,6 @@ font-size:14px;
     		
 		</div>
 	</div>
-	<br><div class="row">
-	    <div class="col-sm-6">
-	        
-    		<div class="input-group">
-    			<span class="input-group-addon">CGPA</span>
-    			<input class="form-control" type="text" name="cgpa" maxlength="4"style="width: 300px" placeholder="CGPA"/>
-    		</div>
-    		
-		</div>
-	</div>
 	
 	
 </div>
@@ -162,7 +152,7 @@ font-size:14px;
 
 </div>
 <div class="form-group">
-      <input class="form-control"  name="Submit"  type="Submit" value="Submit", onclick="validateForm()"><br>
+      <input class="form-control"  name="Submit"  type="Submit" value="Submit"><br>
     </div>
 	
 </form>	
@@ -192,6 +182,7 @@ if(regex.test(flds[0].value) == false)
    return false;
 }
 var cerc=0;
+var cgpa=0
 //https://drive.google.com/file/d/1f-_JvG8oxnTjcrr-GSkOIRi4OcQoI2Bf/view?usp=sharing
 for (var i = 1; i < flds.length-1; i+=1) 
 {
@@ -203,19 +194,25 @@ for (var i = 1; i < flds.length-1; i+=1)
 		   roll.focus();
 		   return false;
 		}
+		else
+		{
+		console.log(flds[i].value);
+		cgpa=Number(cgpa) + Number(flds[i].value);
+		console.log(cgpa);
+		}
 	}
 	else
 	{
 		alert("Enter GPA");
 		roll.focus();
 		return false;
-	
 	}
 	
 	cerc=cerc+1;
 }
+cgpa/=8;
 
-alert("Submission is Successful :)");
+alert("Submission is Successful :) CGPA = "+cgpa);
 }
 </script>
 </body>  
