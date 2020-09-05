@@ -156,7 +156,7 @@ font-size:14px;
 
 </div>
 <div class="form-group">
-      <input class="form-control"  name="Submit"  type="Submit" value="Submit"><br>
+      <input class="form-control"  name="Submit"  type="Submit" value="Submit" onclick="validateForm()"><br>
     </div>
 	
 </form>	
@@ -184,18 +184,21 @@ if(regex.test(flds[0].value) == false)
    roll.focus();
    return false;
 }
-var proof= /^(https:\/\/drive.google.com\/)[a-zA-Z0-9@:%._\+~#=]*/;
+var proof= /[https:\/\/drive.google.com\/][a-zA-Z0-9@:%._\/+~#=]*/;
 var cername=/[a-zA-Z]*/
-var cerc=0;
+var cerc=1;
+//console.log(flds);
 //https://drive.google.com/file/d/1f-_JvG8oxnTjcrr-GSkOIRi4OcQoI2Bf/view?usp=sharing
-for (var i = 1; i < flds.length; i=i+2) 
+for (var i = 18; i < flds.length-1; i=i+2) 
 {
     if(flds[i].value!==null) 
 	{
+	console.log(flds[i].value);
         if(cername.test(flds[i].value)==false)
 		{
 			alert("Invalid Certificate name.Try again...");
 			flds[i].focus();
+			console.log(flds[i].value);
 			return false;
 		}
 	   else
@@ -204,15 +207,22 @@ for (var i = 1; i < flds.length; i=i+2)
 			{
 			alert("Enter URL of the Certificate document");
 			flds[i+1].focus();
+			console.log(flds[i+1].value);
 			return false;
 		    }
 			else if(proof.test(flds[i+1].value)==false)
 			{
 			alert("Invalid URL of the certificate document.Try again...");
 			flds[i+1].focus();
+			console.log(flds[i+1].value);
 			return false;
 			}
+			else
+			{
+			cerc=cerc+1;
+			}
 		}
+	
 	}
 	else
 	{
@@ -220,15 +230,14 @@ for (var i = 1; i < flds.length; i=i+2)
 	
 		alert("enter certificate name first");
 		flds[i].focus();
+		console.log(flds[i+1].value);
 		return false;
 		}
 	
 	}
-	
-	cerc=cerc+1;
 }
 
-alert("You have entered a total of "+cerc+"certificates and the Submission is Successful :)");
+alert("Submission is Successful :)");
 }
 </script>
 </body>  
