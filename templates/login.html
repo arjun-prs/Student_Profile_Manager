@@ -6,8 +6,10 @@
     <title>Login</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  </head>
+    <script src="../scripts/login.js"></script>
+    </head>
   <body>
+
     <nav class="navbar is-transparent">
       <div class="navbar-start">
         <!-- <a class="navbar-item" href="https://bulma.io">
@@ -32,37 +34,6 @@
               About
             </a>
 
-          <!-- <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
-              Docs
-            </a>
-             -->
-            <!-- navbar drop down items -->
-
-            <!-- <div class="navbar-dropdown is-boxed">
-              <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
-                Overview
-              </a>
-              <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
-                Modifiers
-              </a>
-              <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
-                Columns
-              </a>
-              <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
-                Layout
-              </a>
-              <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
-                Form
-              </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
-                Elements
-              </a>
-              <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
-                Components
-              </a>
-            </div> -->
           </div>
         </div>
     
@@ -105,7 +76,7 @@
       </section>
       
 <div class="container">
-  <form action="http://localhost:5000/login/" method="POST">
+  <form action="">
       <div class="field">
         <label class="label">User - ID</label>
         <div class="control">
@@ -125,7 +96,7 @@
           <br>          
       <div class="field">
         <div class="control">
-          <button class="button is-dark is-large is-fullwidth" type="submit">Submit</button>
+          <button class="button is-dark is-large is-fullwidth" type="submit" onclick="login()">Submit</button>
         </div>
       </div>
     </form>
