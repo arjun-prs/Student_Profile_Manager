@@ -91,8 +91,9 @@
 
       <script type="text/javascript">
         function isValidated(){
+            // alert('Hi!');
             var email_regx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            var check_user = /^(?=.*\d)*(?=.*[a-z])*(?=.*[A-Z])*(?=.*[^a-zA-Z0-9])*(?!.*\s)*.{8,15}*$/;
+            var check_user = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/g;
             var num_regex =  /^\d{10}$/;
 
             var email = document.getElementById("email");
@@ -100,12 +101,12 @@
             var confpwd = document.getElementById("confpwd");
             var mob = document.getElementById("mob");
 
-            if(!mob.value.match(num_regex)) {
+            if(mob.value.match(num_regex) == null) {
                 alert("Mobile Number should be digits! ");
                 return false;
             }
 
-            if(mob.length < 10){
+            if(mob.value.length < 10){
                 alert("Invalid number. It should be 10 digits only.");
                 return false;
             }
@@ -125,7 +126,7 @@
                     }
                 }
                 else{
-                    alert("Please check your password format");
+                    alert("Please check your password format: Both Cases, 8-15 Characters long and Numbers please!");
                     return false;
                 }
 
@@ -135,7 +136,7 @@
                 return false;
             }
 
-        return true
+        // return true;
         }
         </script>
 
