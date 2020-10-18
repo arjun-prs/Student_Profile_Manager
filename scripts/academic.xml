@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root>
+<!DOCTYPE root 
+[
+<!ELEMENT root (row)+>
+<!ATTLIST root
+  xmlns CDATA #FIXED 'https://w3schoools.com'
+  xmlns:xsi CDATA #FIXED 'http://www.w3.org/2001/XMLSchema-instance'
+  xsi:schemaLocation CDATA #REQUIRED>
+<!ELEMENT row (roll_no,sgpa1,sgpa2,sgpa3,sgpa4,sgpa5,sgpa6,sgpa7,sgpa8,cgpa)>
+<!ELEMENT roll_no (#PCDATA)>
+<!ELEMENT sgpa1 (#PCDATA)>
+<!ELEMENT sgpa2 (#PCDATA)>
+<!ELEMENT sgpa3 (#PCDATA)>
+<!ELEMENT sgpa4 (#PCDATA)>
+<!ELEMENT sgpa5 (#PCDATA)>
+<!ELEMENT sgpa6 (#PCDATA)>
+<!ELEMENT sgpa7 (#PCDATA)>
+<!ELEMENT sgpa8 (#PCDATA)>
+<!ELEMENT cgpa EMPTY>
+]>
+
+<root xmlns="https://w3schoools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org xsdForacademic.xsd">
   <row>
     <roll_no>CB.EN.U4CSE17401</roll_no>
     <sgpa1>9.2</sgpa1>
