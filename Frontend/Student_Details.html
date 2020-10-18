@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  </head>
+  <body>
+      <section class="hero is-primary is-fullheight">
+
+          <div class="hero-body">
+              <div class="container">
+                <div class="columns is-5-tablet is-4-desktop is-3-widescreen">
+                    <div class="column">
+                        <form onsubmit="return isValidated();" class = "box has-background-white-ter" id="sdform">
+
+                            <h1 style="font-family: Bangers; font-size: xx-large;">Student Profile</h3>
+                                <br>
+
+                            <!-- <progress class="progress is-primary" value="15" max="100">15%</progress> -->
+                            
+                            <div class="control">
+                                Username: 
+                                <p class="control has-icons-left"> 
+                                    <input class="input is-rounded" type="text" name="uname "id="uname" maxlength="50" placeholder="Username" >
+                                    <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <br>
+
+                            <div class="control">
+                                Password: 
+                                <p class="control has-icons-left">
+                                    <input class="input is-rounded" type="password" id="pwd" name="pwd" maxlength="50" placeholder="Password">
+                                    <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <br>
+
+                            <div class="control">
+                                Confirm Password:
+                                <p class="control has-icons-left">
+                                    <input class="input is-rounded" type="password" id="confpwd" name="confpwd" maxlength="50" placeholder="Confirm Password">
+                                    <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <br>
+
+                            <div class="control">
+                                Contact Number: 
+                                <p class="control has-icons-left">
+                                    <input class="input is-rounded" type="text" id="mob" maxlength="10" name="mob" placeholder="9xxxxxxxxx">
+                                    <span class="icon is-small is-left">
+                                    <i class="fas fa-mobile"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <br>
+
+                            <div class="control">
+                                Email: 
+                                <p class="control has-icons-left">
+                                    <input class="input is-rounded" type="email" id="email" maxlength="50" name="email" placeholder="johnappleseed@gmail.com" >
+                                    <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <br>
+                            <div class="buttons">
+                                <button class="button is-success is-rounded" type="submit" form="sdform">Submit</button>
+                                <button class="button is-danger is-rounded">Retreat</button>
+                              </div>
+                            <br>
+                        </form>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </section>
+
+      <script type="text/javascript">
+        function isValidated(){
+            // alert('Hi!');
+            var email_regx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var check_user = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/g;
+            var num_regex =  /^\d{10}$/;
+
+            var email = document.getElementById("email");
+            var pwd = document.getElementById("pwd");
+            var confpwd = document.getElementById("confpwd");
+            var mob = document.getElementById("mob");
+
+            if(mob.value.match(num_regex) == null) {
+                alert("Mobile Number should be digits! ");
+                return false;
+            }
+
+            if(mob.value.length < 10){
+                alert("Invalid number. It should be 10 digits only.");
+                return false;
+            }
+            
+            if(email.value.match(email_regx)) {
+                if(pwd.value.match(check_user) && confpwd.value.match(check_user)) 
+                {
+                    if(pwd.value == confpwd.value)
+                    {
+                        alert("Success!");
+                        return true;
+                    }
+
+                    else{
+                        alert("Passwords do not match");
+                        return false;
+                    }
+                }
+                else{
+                    alert("Please check your password format");
+                    return false;
+                }
+
+        }
+            else{
+                alert("Please check your email format.");
+                return false;
+            }
+
+        // return true;
+        }
+        </script>
+
+        
+  </body>
+</html> 
