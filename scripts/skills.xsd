@@ -1,0 +1,25 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="row" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="roll_no"/>
+              <xs:element type="xs:string" name="skill1"/>
+              <xs:element type="xs:string" name="proof1"/>
+              <xs:element type="xs:string" name="skill2"/>
+              <xs:element type="xs:string" name="proof2"/>
+              <xs:element type="xs:string" name="skill3"/>
+              <xs:element type="xs:string" name="proof3"/>
+              <xs:element type="xs:string" name="skill4"/>
+              <xs:element type="xs:string" name="proof4"/>
+              <xs:element type="xs:string" name="skill5"/>
+              <xs:element type="xs:string" name="proof5"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

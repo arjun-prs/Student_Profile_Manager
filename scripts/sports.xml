@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="sports.xsl" type:"text/xsl" ?>
+
+<!DOCTYPE root [
+<!ELEMENT root (row)+>
+<!ELEMENT row (roll_no,sport1,sport2,sport3,sport4,sport5)>
+<!ELEMENT roll_no (#PCDATA)>
+<!ELEMENT sport1 (#PCDATA)>
+<!ELEMENT sport2 (#PCDATA)>
+<!ELEMENT sport3 (#PCDATA)>
+<!ELEMENT sport4 (#PCDATA)>
+<!ELEMENT sport5 (#PCDATA)>
+]>
 <root>
+<!-- <root xmlns="https://w3schoools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="sports.xsd"> -->
   <row>
     <roll_no>CB.EN.U4CSE17401</roll_no>
     <sport1>Cricket</sport1>

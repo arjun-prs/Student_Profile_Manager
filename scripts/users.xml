@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="users.xsl" type:"text/xsl" ?>
+<!DOCTYPE root [
+<!ELEMENT root (row)+>
+<!ELEMENT row (user_id,user_name,mob,email,resume_link,dob,isAdmin,gender,pwd)>
+<!ELEMENT user_id (#PCDATA)>
+<!ELEMENT user_name (#PCDATA)>
+<!ELEMENT mob (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT resume_link (#PCDATA)>
+<!ELEMENT dob (#PCDATA)>
+<!ELEMENT isAdmin (#PCDATA)>
+<!ELEMENT gender (#PCDATA)>
+<!ELEMENT pwd (#PCDATA)>
+]>
 <root>
+<!-- <root xmlns="https://w3schoools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="user.xsd"> -->
   <row>
     <user_id>admin</user_id>
     <user_name>admin</user_name>
