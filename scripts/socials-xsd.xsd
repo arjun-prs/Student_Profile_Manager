@@ -1,0 +1,20 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://w3schoools.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="row" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="roll_no"/>
+              <xs:element type="xs:string" name="social1"/>
+              <xs:element type="xs:string" name="social2"/>
+              <xs:element type="xs:string" name="social3"/>
+              <xs:element type="xs:anyURI" name="social4"/>
+              <xs:element type="xs:anyURI" name="social5"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
